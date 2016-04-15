@@ -40,6 +40,7 @@
 @property (nonatomic, weak) UIImage *rightArrowImage, *rightArrowSelectedImage;
 
 // View customization
+@property (nonatomic) BOOL controlsAlwaysVisible;
 @property (nonatomic) BOOL displayDoneButton;
 @property (nonatomic) BOOL useWhiteBackgroundColor;
 @property (nonatomic, weak) UIImage *doneButtonImage;

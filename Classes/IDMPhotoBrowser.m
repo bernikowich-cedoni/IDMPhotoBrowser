@@ -1153,7 +1153,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     
     // Hide/show bars
     [UIView animateWithDuration:(animated ? 0.1 : 0) animations:^(void) {
-        CGFloat alpha = hidden ? 0 : 1;
+        CGFloat alpha = (hidden && !self.controlsAlwaysVisible) ? 0 : 1;
         [self.navigationController.navigationBar setAlpha:alpha];
         [_toolbar setAlpha:alpha];
         [_doneButton setAlpha:alpha];
