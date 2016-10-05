@@ -137,7 +137,7 @@ caption = _caption;
         } else if (_photoURL) {
             // Load async from web (using SDWebImageManager)
             SDWebImageManager *manager = [SDWebImageManager sharedManager];
-            [manager loadImageWithURL:_photoURL options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            [manager loadImageWithURL:_photoURL options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL *targetURL) {
                 CGFloat progress = ((CGFloat)receivedSize)/((CGFloat)expectedSize);
                 if (self.progressUpdateBlock) {
                     self.progressUpdateBlock(progress);
